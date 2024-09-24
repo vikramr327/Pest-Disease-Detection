@@ -1,4 +1,5 @@
 import pandas as pd   # Great for tables (google spreadsheets, microsoft excel, csv).
+import streamlit as st
 import os # Good for navigating your computer's files
 import gdown
 import seaborn as sns
