@@ -1,0 +1,26 @@
+import pandas as pd   # Great for tables (google spreadsheets, microsoft excel, csv).
+import os # Good for navigating your computer's files
+import gdown
+import seaborn as sns
+from sklearn.metrics import accuracy_score
+from sklearn import tree
+import matplotlib.pyplot as plt
+from sklearn.tree import DecisionTreeClassifier
+from joblib import dump, load
+import cv2
+import warnings
+import numpy as np
+warnings.filterwarnings("ignore")
+!pip -q install streamlit
+!pip -q install pyngrok
+from pyngrok import ngrok
+
+
+
+
+
+def launch_website():
+  print ("Click this link to try your web app:")
+  public_url = ngrok.connect()
+  print (public_url)
+  !streamlit run --server.port 80 app.py >/dev/null
